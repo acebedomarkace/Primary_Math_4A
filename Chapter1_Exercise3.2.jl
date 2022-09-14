@@ -26,7 +26,7 @@ md"""
 
 # ╔═╡ 95567e32-d284-4ecd-bdc8-6761cff0c075
 md"""
-#### 1. Fill in the blanks.
+#### 2. Fill in the blanks.
 """
 
 # ╔═╡ d7b50aee-51eb-4089-98aa-30d804485faa
