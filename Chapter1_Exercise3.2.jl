@@ -99,7 +99,7 @@ begin
 		if ("500")==ans || ("five hundred")==ans
 			print("👍 That's correct!")
 			return 1
-		elseif ("","")==ans
+		elseif ("")==ans
 			print("😀 Type in your answer in the empty box.")
 			return ""
 		else
