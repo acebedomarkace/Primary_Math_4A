@@ -50,9 +50,15 @@ md"""
 #### 4. Fill in the blanks.
 """
 
+# ╔═╡ 32b6fa97-f7e2-4474-9d5b-8e6020b36851
+
+
+# ╔═╡ 1afd8456-df16-4e5b-a5e2-9599aa11fa99
+
+
 # ╔═╡ 6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
 @htl("""
-<p style="margin-bottom: 10px;">A number line</p>
+<p style="margin-top: -10px;">A number line</p>
 
 
 <div class="lineContainerTop">
@@ -593,6 +599,8 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╟─095c5690-2829-11ed-0d49-af3b33334ea7
 # ╟─c1ba96d8-4f88-4338-ab8c-e7b399f63115
 # ╟─95567e32-d284-4ecd-bdc8-6761cff0c075
+# ╟─32b6fa97-f7e2-4474-9d5b-8e6020b36851
+# ╟─1afd8456-df16-4e5b-a5e2-9599aa11fa99
 # ╟─6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
 # ╟─0c500ada-2b03-4333-b03a-0776dd5df8f1
 # ╠═fd78ee33-5827-4116-aa9d-8ac63487856d
