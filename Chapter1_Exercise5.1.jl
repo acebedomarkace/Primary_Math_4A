@@ -150,7 +150,7 @@ md"""
 
 .numberContainerTop {
   position: absolute;
-  top: 22px;
+  top: 13px;
   margin: 0;
   padding: 0;
 }
@@ -593,7 +593,7 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╟─095c5690-2829-11ed-0d49-af3b33334ea7
 # ╟─c1ba96d8-4f88-4338-ab8c-e7b399f63115
 # ╟─95567e32-d284-4ecd-bdc8-6761cff0c075
-# ╠═6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
+# ╟─6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
 # ╟─0c500ada-2b03-4333-b03a-0776dd5df8f1
 # ╠═fd78ee33-5827-4116-aa9d-8ac63487856d
 # ╟─0aca2657-dcef-49f8-bf16-91845e6150f0
