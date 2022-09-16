@@ -21,35 +21,17 @@ md"""
 
 # ╔═╡ c1ba96d8-4f88-4338-ab8c-e7b399f63115
 md"""
-### Exercise 3
+### Exercise 4
 """
 
 # ╔═╡ 95567e32-d284-4ecd-bdc8-6761cff0c075
 md"""
-#### 1. Fill in the blanks.
+#### 1. Add.
 """
-
-# ╔═╡ b8442aff-f209-4793-a466-611f20f5712a
-html"<table>
-  <tr>
-    <th>Ten thousands</th>
-    <th>Thousands</th>
-    <th>Hundreds</th>
-    <th>Tens</th>
-    <th>Ones</th>
-  </tr>
-  <tr style=text-align:center>
-    <td>7</td>
-    <td>8</td>
-    <td>2</td>
-    <td>4</td>
-    <td>3</td>
-  </tr>
-</table>"
 
 # ╔═╡ d7b50aee-51eb-4089-98aa-30d804485faa
 md""" **(a)**
-In **7**8,243, the digit **7** stands for $(@bind a1 html"<input type=text >").
+7000 + 9000 = $(@bind a1 html"<input type=text >") 
 """
 
 # ╔═╡ 760ac96e-2a25-4766-b3f9-ca3eacd86206
@@ -58,7 +40,7 @@ ans_a1 = (a1);
 # ╔═╡ f2d7328a-ec9b-4f7d-b388-2fefd02e9e61
 begin
 	function checker_a1(ans)
-		if ("70000")==ans || ("70,000")==ans ||("seventy thousand")==ans
+		if ("16000")==ans || ("16,000")==ans
 			print("👍 That's correct!")
 			return 1
 		elseif ("")==ans
@@ -71,26 +53,24 @@ begin
 	end
 end;
 
-# ╔═╡ 79570890-b4a0-4f6f-bbfa-3bf8636a2db1
+# ╔═╡ 3727c098-dc5d-4c94-aca1-1911f2a8b54b
 result_a1=checker_a1(ans_a1);
 
 # ╔═╡ 0f42c45a-adb8-40be-bb06-f3c4dab01977
 md""" **(b)**
-In 78,243, the digit $(@bind b1 html"<input type=text >") is in the **hundreds** place.
-
-The value of the digit is $(@bind b2 html"<input type=text >") .
+23,000 + 14,000 = $(@bind b1 html"<input type=text >") 
 """
 
 # ╔═╡ 08437ae2-72f8-4f23-a231-7db1d0ccdc0f
-ans_b1 = (b1,b2);
+ans_b1 = (b1);
 
 # ╔═╡ 8a6bfe77-972c-4edb-ab63-0b6ee4eaf3cf
 begin
 	function checker_b1(ans)
-		if ("2","200")==ans || ("two","two hundred")==ans
+		if ("37000")==ans || ("37,000")==ans
 			print("👍 That's correct!")
 			return 1
-		elseif ("","")==ans
+		elseif ("")==ans
 			print("😀 Type in your answer in the empty box.")
 			return ""
 		else
@@ -100,26 +80,24 @@ begin
 	end
 end;
 
-# ╔═╡ cd268280-6c81-493b-bf7c-592baa500fe5
+# ╔═╡ fcdc4c59-fc29-45fc-976b-d40ba9652be2
 result_b1=checker_b1(ans_b1);
 
-# ╔═╡ c54082a1-6c10-49e1-bc30-4a03c2d860aa
+# ╔═╡ 025e600d-90ba-438d-bdec-3f0c68d3c894
 md""" **(c)**
-In 78,243, the **tens** digit is $(@bind c1 html"<input type=text >") and 
-
-the **thousands** digit is $(@bind c2 html"<input type=text >") .
+18,000 + 6000 = $(@bind c1 html"<input type=text >") 
 """
 
-# ╔═╡ cc15b932-9256-4937-a9aa-6e19bf7f4df2
-ans_c1 = (c1,c2);
+# ╔═╡ d5a8d995-165d-4782-af0d-bb8a02fdf57d
+ans_c1 = (c1);
 
-# ╔═╡ d9714690-82e1-4007-9283-ba186e367da7
+# ╔═╡ 5a4cba0d-0d40-4bbc-a8f1-8bd83f9ba9cb
 begin
 	function checker_c1(ans)
-		if ("4","8")==ans || ("four","eight")==ans
+		if ("24000")==ans || ("24,000")==ans
 			print("👍 That's correct!")
 			return 1
-		elseif ("","")==ans
+		elseif ("")==ans
 			print("😀 Type in your answer in the empty box.")
 			return ""
 		else
@@ -129,8 +107,62 @@ begin
 	end
 end;
 
-# ╔═╡ 4d6565a8-e769-4279-9215-7ad121ab0066
+# ╔═╡ 4673b59e-e1a3-4b42-994e-0eb4cd218360
 result_c1=checker_c1(ans_c1);
+
+# ╔═╡ f4b1b496-5888-4d77-95e3-8a0e2563c22a
+md""" **(d)**
+29,000 + 12,000 = $(@bind d1 html"<input type=text >") 
+"""
+
+# ╔═╡ 49db1318-fcf9-42d3-a13c-9bcb8e8d883e
+ans_d1 = (d1);
+
+# ╔═╡ 3c4a5d20-54f8-4d9a-a39a-f81fd240c168
+begin
+	function checker_d1(ans)
+		if ("41000")==ans || ("41,000")==ans
+			print("👍 That's correct!")
+			return 1
+		elseif ("")==ans
+			print("😀 Type in your answer in the empty box.")
+			return ""
+		else
+			print("🤔 Something is not right...")
+			return 0
+		end
+	end
+end;
+
+# ╔═╡ 5359a2d1-d559-4726-927a-023a06581ac6
+result_d1=checker_d1(ans_d1);
+
+# ╔═╡ 4c7908be-1b73-4c0b-a47c-a73d44f35aba
+md""" **(e)**
+46,000 + 24,000 = $(@bind e1 html"<input type=text >") 
+"""
+
+# ╔═╡ 86c14bdd-1645-421e-a00d-bfb97500951a
+ans_e1 = (e1);
+
+# ╔═╡ 8c45938a-4cdd-44be-b6c1-10d7fdcb791b
+begin
+	function checker_e1(ans)
+		if ("70000")==ans || ("70,000")==ans
+			print("👍 That's correct!")
+			return 1
+		elseif ("")==ans
+			print("😀 Type in your answer in the empty box.")
+			return ""
+		else
+			print("🤔 Something is not right...")
+			return 0
+		end
+	end
+end;
+
+# ╔═╡ 80f5397f-a171-46b3-86fe-e78567ddf7c2
+result_e1=checker_e1(ans_e1);
 
 # ╔═╡ 1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 md""" # Summary
@@ -138,7 +170,7 @@ md""" # Summary
 
 # ╔═╡ ced0a305-0ce5-4490-8b63-7074a530ba1d
 begin
-	results = [result_a1, result_b1, result_c1]
+	results = [result_a1, result_b1, result_c1, result_d1, result_e1]
 
 	top_score = length(results)
 	
@@ -182,19 +214,26 @@ project_hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
 # ╟─095c5690-2829-11ed-0d49-af3b33334ea7
 # ╟─c1ba96d8-4f88-4338-ab8c-e7b399f63115
 # ╟─95567e32-d284-4ecd-bdc8-6761cff0c075
-# ╟─b8442aff-f209-4793-a466-611f20f5712a
 # ╟─d7b50aee-51eb-4089-98aa-30d804485faa
-# ╟─79570890-b4a0-4f6f-bbfa-3bf8636a2db1
+# ╟─3727c098-dc5d-4c94-aca1-1911f2a8b54b
 # ╟─760ac96e-2a25-4766-b3f9-ca3eacd86206
-# ╠═f2d7328a-ec9b-4f7d-b388-2fefd02e9e61
+# ╟─f2d7328a-ec9b-4f7d-b388-2fefd02e9e61
 # ╟─0f42c45a-adb8-40be-bb06-f3c4dab01977
-# ╟─cd268280-6c81-493b-bf7c-592baa500fe5
+# ╟─fcdc4c59-fc29-45fc-976b-d40ba9652be2
 # ╟─08437ae2-72f8-4f23-a231-7db1d0ccdc0f
 # ╟─8a6bfe77-972c-4edb-ab63-0b6ee4eaf3cf
-# ╟─c54082a1-6c10-49e1-bc30-4a03c2d860aa
-# ╟─4d6565a8-e769-4279-9215-7ad121ab0066
-# ╟─cc15b932-9256-4937-a9aa-6e19bf7f4df2
-# ╟─d9714690-82e1-4007-9283-ba186e367da7
+# ╟─025e600d-90ba-438d-bdec-3f0c68d3c894
+# ╟─4673b59e-e1a3-4b42-994e-0eb4cd218360
+# ╟─d5a8d995-165d-4782-af0d-bb8a02fdf57d
+# ╟─5a4cba0d-0d40-4bbc-a8f1-8bd83f9ba9cb
+# ╟─f4b1b496-5888-4d77-95e3-8a0e2563c22a
+# ╟─5359a2d1-d559-4726-927a-023a06581ac6
+# ╟─49db1318-fcf9-42d3-a13c-9bcb8e8d883e
+# ╟─3c4a5d20-54f8-4d9a-a39a-f81fd240c168
+# ╟─4c7908be-1b73-4c0b-a47c-a73d44f35aba
+# ╟─80f5397f-a171-46b3-86fe-e78567ddf7c2
+# ╟─86c14bdd-1645-421e-a00d-bfb97500951a
+# ╟─8c45938a-4cdd-44be-b6c1-10d7fdcb791b
 # ╟─1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 # ╟─ced0a305-0ce5-4490-8b63-7074a530ba1d
 # ╟─00000000-0000-0000-0000-000000000001
