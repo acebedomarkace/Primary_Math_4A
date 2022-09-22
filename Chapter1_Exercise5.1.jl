@@ -14,30 +14,12 @@ macro bind(def, element)
     end
 end
 
-# ╔═╡ d8b60bec-4c75-45b9-a3f2-d0977d68c38a
-using PlutoUI,HypertextLiteral
-
-# ╔═╡ ff8353d0-a96c-4e84-84ea-6ca61b4a1edd
-correct(text=md"Great! You got the right answer! Let's move on to the next section.") = Markdown.MD(Markdown.Admonition("correct", "Got it!", [text]));
-
-# ╔═╡ 84a98a70-21a7-4e56-bac4-a44ed48db65e
-correct()
-
-# ╔═╡ f305380c-cbbc-4080-a4ea-bb3cfd27374d
-keep_working(text=md"The answer is not quite right.") = Markdown.MD(Markdown.Admonition("danger", "Keep working on it!", [text]));
-
-# ╔═╡ f76a7333-4480-4a12-8363-560deb224c0b
-keep_working()
-
-# ╔═╡ 9b6bdea2-77bf-48ec-b29e-854f821105bd
-hint(text) = Markdown.MD(Markdown.Admonition("hint", "Hint", [text]));
-
-# ╔═╡ 20fc29c4-660b-4ba8-9e76-e348ffc6f144
-hint(md"A new cut will create the maximum number of _new slices_ if it intersects all previous cuts.")
+# ╔═╡ 762db7b7-b0b3-48ba-9ae5-fad64ece489a
+using PlutoUI
 
 # ╔═╡ 095c5690-2829-11ed-0d49-af3b33334ea7
 md"""
-# Numbers to 10,000
+# Rounding off Numbers
 """
 
 # ╔═╡ c1ba96d8-4f88-4338-ab8c-e7b399f63115
@@ -47,298 +29,133 @@ md"""
 
 # ╔═╡ 95567e32-d284-4ecd-bdc8-6761cff0c075
 md"""
-#### 4. Fill in the blanks.
+#### 1. Fill in the blanks.
 """
 
-# ╔═╡ 32b6fa97-f7e2-4474-9d5b-8e6020b36851
-
-
-# ╔═╡ 1afd8456-df16-4e5b-a5e2-9599aa11fa99
-
-
-# ╔═╡ 6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
-@htl("""
-<p style="margin-top: -10px;">A number line</p>
-
-
-<div class="lineContainerTop">
-  <div class="numberContainerTop">
-    <div class="numberLeftEnd"></div>
-    <div class="number">-5</div>
-    <div class="number">-4</div>
-    <div class="number">-3</div>
-    <div class="number">-2</div>
-    <div class="number">-1</div>
-    <div class="number">0</div>
-    <div class="number">1</div>
-    <div class="number">2</div>
-    <div class="number">3</div>
-    <div class="number">4</div>
-    <div class="number">5</div>
-  </div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line lineRightEnd"></div>
- 
-</div>
-<div class="lineContainer">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line lineRightEnd"></div>
- <div class="numberContainer">
-    <div class="numberLeftEnd"></div>
-    <div class="number">-5</div>
-    <div class="number">-4</div>
-    <div class="number">-3</div>
-    <div class="number">-2</div>
-    <div class="number">-1</div>
-    <div class="number">0</div>
-    <div class="number">1</div>
-    <div class="number">2</div>
-    <div class="number">3</div>
-    <div class="number">4</div>
-    <div class="number">5</div>
-  </div>
-</div>
-
-<style>
-.lineContainer {
-  position: absolute;
-}
-
-.lineContainer .line {
-  border-right: 1px solid blue;
-  width: 21px;
-  Height: 18px;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-
-.lineContainerTop .line {
-  border-bottom: 1px solid blue;
-  border-right: 1px solid blue;
-  width: 21px;
-  Height: 8px;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-
-.lineRightEnd {
-  border-right: 0 !important;
-}
-
-.numberContainer {
-  position: absolute;
-  top: 19px;
-  margin: 0;
-  padding: 0;
-}
-
-.numberContainerTop {
-  position: absolute;
-  top: 13px;
-  margin: 0;
-  padding: 0;
-}
-
-.number {
-  width: 21px;
-  float: left;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.numberLeftEnd {
-  width: 10px;
-  Height: 5px;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-</style>
-""")
-
-# ╔═╡ 0c500ada-2b03-4333-b03a-0776dd5df8f1
-
-
-# ╔═╡ fd78ee33-5827-4116-aa9d-8ac63487856d
-
-
-# ╔═╡ 0aca2657-dcef-49f8-bf16-91845e6150f0
-
-
-# ╔═╡ 6ec6c789-c34c-408e-a7f9-ce56981fb7dc
-
-
-# ╔═╡ c61624e2-9821-4c72-9b49-21f19bacc7b0
-
-
-# ╔═╡ 37cfc3bb-7fef-4138-a7b2-801d36933463
-
-
-# ╔═╡ d7b50aee-51eb-4089-98aa-30d804485faa
-md""" **(a)**
-8000 ÷ 4 = $(@bind a1 html"<input type=text >") 
+# ╔═╡ 6e971be6-c1ce-46fe-9b0a-4399316ef1a3
+md""" **a)** 
+47 is $(@bind a1 NumberField(0:100)) when rounded off to the nearest ten.
 """
 
-# ╔═╡ 760ac96e-2a25-4766-b3f9-ca3eacd86206
-ans_a1 = (a1);
-
-# ╔═╡ f2d7328a-ec9b-4f7d-b388-2fefd02e9e61
-begin
-	function checker_a1(ans)
-		if ("2000")==ans || ("2,000")==ans
-			print("👍 That's correct!")
-			return 1
-		elseif ("")==ans
-			print("😀 Type in your answer in the empty box.")
-			return ""
-		else
-			print("🤔 Something is not right...")
-			return 0
-		end
-	end
-end;
-
-# ╔═╡ 3727c098-dc5d-4c94-aca1-1911f2a8b54b
-result_a1=checker_a1(ans_a1);
-
-# ╔═╡ 0f42c45a-adb8-40be-bb06-f3c4dab01977
-md""" **(b)**
-72,000 ÷ 6 = $(@bind b1 html"<input type=text >") 
+# ╔═╡ c50bd342-2177-4397-94c9-21685776ca91
+md""" **b)** 
+83 is $(@bind b1 NumberField(0:100)) when rounded off to the nearest ten.
 """
 
-# ╔═╡ 08437ae2-72f8-4f23-a231-7db1d0ccdc0f
-ans_b1 = (b1);
-
-# ╔═╡ 8a6bfe77-972c-4edb-ab63-0b6ee4eaf3cf
-begin
-	function checker_b1(ans)
-		if ("12000")==ans || ("12,000")==ans
-			print("👍 That's correct!")
-			return 1
-		elseif ("")==ans
-			print("😀 Type in your answer in the empty box.")
-			return ""
-		else
-			print("🤔 Something is not right...")
-			return 0
-		end
-	end
-end;
-
-# ╔═╡ fcdc4c59-fc29-45fc-976b-d40ba9652be2
-result_b1=checker_b1(ans_b1);
-
-# ╔═╡ 025e600d-90ba-438d-bdec-3f0c68d3c894
-md""" **(c)**
-6000 ÷ 2 = $(@bind c1 html"<input type=text >") 
+# ╔═╡ 597b6b36-df29-436d-aae8-c483784726eb
+md""" **c)** 
+164 is $(@bind c1 NumberField(0:100)) when rounded off to the nearest ten.
 """
 
-# ╔═╡ d5a8d995-165d-4782-af0d-bb8a02fdf57d
-ans_c1 = (c1);
-
-# ╔═╡ 5a4cba0d-0d40-4bbc-a8f1-8bd83f9ba9cb
-begin
-	function checker_c1(ans)
-		if ("3000")==ans || ("3,000")==ans
-			print("👍 That's correct!")
-			return 1
-		elseif ("")==ans
-			print("😀 Type in your answer in the empty box.")
-			return ""
-		else
-			print("🤔 Something is not right...")
-			return 0
-		end
-	end
-end;
-
-# ╔═╡ 4673b59e-e1a3-4b42-994e-0eb4cd218360
-result_c1=checker_c1(ans_c1);
-
-# ╔═╡ f4b1b496-5888-4d77-95e3-8a0e2563c22a
-md""" **(d)**
-15,000 ÷ 5 = $(@bind d1 html"<input type=text >") 
+# ╔═╡ 959a6fb8-ea4b-4034-b36c-d5eaaf56a5ee
+md""" **d)** 
+297 is $(@bind d1 NumberField(0:100)) when rounded off to the nearest ten.
 """
 
-# ╔═╡ 49db1318-fcf9-42d3-a13c-9bcb8e8d883e
-ans_d1 = (d1);
-
-# ╔═╡ 3c4a5d20-54f8-4d9a-a39a-f81fd240c168
-begin
-	function checker_d1(ans)
-		if ("3000")==ans || ("3,000")==ans
-			print("👍 That's correct!")
-			return 1
-		elseif ("")==ans
-			print("😀 Type in your answer in the empty box.")
-			return ""
-		else
-			print("🤔 Something is not right...")
-			return 0
-		end
-	end
-end;
-
-# ╔═╡ 5359a2d1-d559-4726-927a-023a06581ac6
-result_d1=checker_d1(ans_d1);
-
-# ╔═╡ 4c7908be-1b73-4c0b-a47c-a73d44f35aba
-md""" **(e)**
-96,000 ÷ 8 = $(@bind e1 html"<input type=text >") 
+# ╔═╡ 1dbaf508-6df6-4ff1-b96c-5e7f1f5eff71
+md""" **e)** 
+1644 is $(@bind e1 NumberField(0:100)) when rounded off to the nearest ten.
 """
 
-# ╔═╡ 86c14bdd-1645-421e-a00d-bfb97500951a
-ans_e1 = (e1);
-
-# ╔═╡ 8c45938a-4cdd-44be-b6c1-10d7fdcb791b
-begin
-	function checker_e1(ans)
-		if ("12000")==ans || ("12,000")==ans
-			print("👍 That's correct!")
-			return 1
-		elseif ("")==ans
-			print("😀 Type in your answer in the empty box.")
-			return ""
-		else
-			print("🤔 Something is not right...")
-			return 0
-		end
-	end
-end;
-
-# ╔═╡ 80f5397f-a171-46b3-86fe-e78567ddf7c2
-result_e1=checker_e1(ans_e1);
+# ╔═╡ dd032d4d-6298-4fcb-9337-17e4fac517fb
+md""" **f)** 
+3447 is $(@bind f1 NumberField(0:100)) when rounded off to the nearest ten.
+"""
 
 # ╔═╡ 1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 md""" # Summary
 """
 
-# ╔═╡ ced0a305-0ce5-4490-8b63-7074a530ba1d
+# ╔═╡ a594288b-101d-4d9f-8cae-d04912a3a505
+correct(text=md"👍 Great! You got the right answer! Let's move on to the next section.") = Markdown.MD(Markdown.Admonition("correct", "Got it!", [text]));
+
+# ╔═╡ c79b606e-8b0f-4d29-adad-1bfed489066e
 begin
-	results = [result_a1, result_b1, result_c1, result_d1, result_e1]
+	function eval_a(ans)
+		if 50 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ eb8fdbab-c959-4fb9-86a7-0368874f8952
+eval_a(a1)[1]
+
+# ╔═╡ fb6a57c7-0fea-4c0c-b7bb-8335b819562b
+begin
+	function eval_b(ans)
+		if 80 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ 50e010ff-a3e4-42cc-a594-39ac3c8f34eb
+eval_b(b1)[1]
+
+# ╔═╡ 6687b5ac-44e5-4019-a091-3bc42cdf861d
+begin
+	function eval_c(ans)
+		if 160 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ de9b828c-d0c9-4d1c-87c6-49e2338fe75d
+eval_c(c1)[1]
+
+# ╔═╡ 7dfa5f8a-1062-4db1-86c5-9528cd4149b8
+begin
+	function eval_d(ans)
+		if 300 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ c0f75efc-ef47-4e8c-9ba0-3253ae823ec9
+eval_d(d1)[1]
+
+# ╔═╡ c2456e5a-fa16-44a1-b11b-f81ff1f2413a
+begin
+	function eval_e(ans)
+		if 1640 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ e80087dd-2d9d-43df-a9a6-5b9df23e4c19
+eval_e(e1)[1]
+
+# ╔═╡ 827f4b3c-ce0a-4c47-ad82-ca0db16855f3
+begin
+	function eval_f(ans)
+		if 3450 == ans
+			return correct(),1
+		else
+			return md"",0
+		end
+	end
+end;
+
+# ╔═╡ e8b882a0-6d7f-42e3-a9a6-d22be21cfc76
+eval_f(f1)[1]
+
+# ╔═╡ 1fa2729a-f3b3-4bb8-b822-4540210a2626
+begin
+	results = [eval_a(a1)[2],eval_b(b1)[2],eval_c(c1)[2],eval_d(d1)[2],eval_e(e1)[2],eval_f(f1)[2]]
 
 	top_score = length(results)
 	
@@ -348,28 +165,37 @@ begin
 			counter += 1
 		end
 	end
-
-	
-	
-	if top_score==counter
-		print("🏆 Perfect score! $(top_score) out of $(top_score)!")
-	elseif 0 == counter
-		exit
-	elseif top_score > counter
-		print("Out of $(top_score) Items, you got: ")
-		print(counter)
-		print(" correctly")
-	end
 end;
+
+# ╔═╡ 65ceab91-c840-454e-84d0-1e26c37cc60e
+keep_working(text=md"🤔 The answer is not quite right.") = Markdown.MD(Markdown.Admonition("danger", "Keep working on it!", [text]));
+
+# ╔═╡ c80071e5-79bd-4f92-b121-e825fc5a998b
+hint(text) = Markdown.MD(Markdown.Admonition("hint", "Congratulations!", [text]));
+
+# ╔═╡ 3ab3491d-69d7-4c11-8d11-25b18ca93ee5
+if top_score==counter
+	hint("🏆 Perfect score! $(top_score) out of $(top_score)!")
+elseif 0 == counter
+	print()
+elseif top_score > counter
+	print("Out of $(top_score) Items, you got: ")
+	print(counter)
+	print(" correctly")
+end
+
+# ╔═╡ 1b2dac24-a68a-48ac-9d56-7aa970e3a0c5
+note(text) = Markdown.MD(Markdown.Admonition("note", "Remember:", [text]));
+
+# ╔═╡ cb1fda99-afb3-4725-9b67-feb132e1e2e4
+note(md"The **number line** is a great tool for solving problems like this.")
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
-HypertextLiteral = "ac1192a8-f4b3-4bfe-ba22-af5b92cd3ab2"
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 
 [compat]
-HypertextLiteral = "~0.9.4"
 PlutoUI = "~0.7.40"
 """
 
@@ -589,46 +415,35 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 """
 
 # ╔═╡ Cell order:
-# ╠═ff8353d0-a96c-4e84-84ea-6ca61b4a1edd
-# ╠═84a98a70-21a7-4e56-bac4-a44ed48db65e
-# ╠═f305380c-cbbc-4080-a4ea-bb3cfd27374d
-# ╠═f76a7333-4480-4a12-8363-560deb224c0b
-# ╠═9b6bdea2-77bf-48ec-b29e-854f821105bd
-# ╠═20fc29c4-660b-4ba8-9e76-e348ffc6f144
-# ╠═d8b60bec-4c75-45b9-a3f2-d0977d68c38a
+# ╟─762db7b7-b0b3-48ba-9ae5-fad64ece489a
 # ╟─095c5690-2829-11ed-0d49-af3b33334ea7
+# ╟─cb1fda99-afb3-4725-9b67-feb132e1e2e4
 # ╟─c1ba96d8-4f88-4338-ab8c-e7b399f63115
 # ╟─95567e32-d284-4ecd-bdc8-6761cff0c075
-# ╟─32b6fa97-f7e2-4474-9d5b-8e6020b36851
-# ╟─1afd8456-df16-4e5b-a5e2-9599aa11fa99
-# ╟─6c0d9c8c-bb0f-4eb4-83f0-321c143d74be
-# ╟─0c500ada-2b03-4333-b03a-0776dd5df8f1
-# ╠═fd78ee33-5827-4116-aa9d-8ac63487856d
-# ╟─0aca2657-dcef-49f8-bf16-91845e6150f0
-# ╠═6ec6c789-c34c-408e-a7f9-ce56981fb7dc
-# ╟─c61624e2-9821-4c72-9b49-21f19bacc7b0
-# ╠═37cfc3bb-7fef-4138-a7b2-801d36933463
-# ╟─d7b50aee-51eb-4089-98aa-30d804485faa
-# ╟─3727c098-dc5d-4c94-aca1-1911f2a8b54b
-# ╟─760ac96e-2a25-4766-b3f9-ca3eacd86206
-# ╟─f2d7328a-ec9b-4f7d-b388-2fefd02e9e61
-# ╟─0f42c45a-adb8-40be-bb06-f3c4dab01977
-# ╟─fcdc4c59-fc29-45fc-976b-d40ba9652be2
-# ╟─08437ae2-72f8-4f23-a231-7db1d0ccdc0f
-# ╟─8a6bfe77-972c-4edb-ab63-0b6ee4eaf3cf
-# ╟─025e600d-90ba-438d-bdec-3f0c68d3c894
-# ╟─4673b59e-e1a3-4b42-994e-0eb4cd218360
-# ╟─d5a8d995-165d-4782-af0d-bb8a02fdf57d
-# ╟─5a4cba0d-0d40-4bbc-a8f1-8bd83f9ba9cb
-# ╟─f4b1b496-5888-4d77-95e3-8a0e2563c22a
-# ╟─5359a2d1-d559-4726-927a-023a06581ac6
-# ╟─49db1318-fcf9-42d3-a13c-9bcb8e8d883e
-# ╟─3c4a5d20-54f8-4d9a-a39a-f81fd240c168
-# ╟─4c7908be-1b73-4c0b-a47c-a73d44f35aba
-# ╟─80f5397f-a171-46b3-86fe-e78567ddf7c2
-# ╟─86c14bdd-1645-421e-a00d-bfb97500951a
-# ╟─8c45938a-4cdd-44be-b6c1-10d7fdcb791b
+# ╟─6e971be6-c1ce-46fe-9b0a-4399316ef1a3
+# ╟─eb8fdbab-c959-4fb9-86a7-0368874f8952
+# ╟─c79b606e-8b0f-4d29-adad-1bfed489066e
+# ╟─c50bd342-2177-4397-94c9-21685776ca91
+# ╟─50e010ff-a3e4-42cc-a594-39ac3c8f34eb
+# ╟─fb6a57c7-0fea-4c0c-b7bb-8335b819562b
+# ╟─597b6b36-df29-436d-aae8-c483784726eb
+# ╟─de9b828c-d0c9-4d1c-87c6-49e2338fe75d
+# ╟─6687b5ac-44e5-4019-a091-3bc42cdf861d
+# ╟─959a6fb8-ea4b-4034-b36c-d5eaaf56a5ee
+# ╟─c0f75efc-ef47-4e8c-9ba0-3253ae823ec9
+# ╟─7dfa5f8a-1062-4db1-86c5-9528cd4149b8
+# ╟─1dbaf508-6df6-4ff1-b96c-5e7f1f5eff71
+# ╟─e80087dd-2d9d-43df-a9a6-5b9df23e4c19
+# ╟─c2456e5a-fa16-44a1-b11b-f81ff1f2413a
+# ╟─dd032d4d-6298-4fcb-9337-17e4fac517fb
+# ╟─e8b882a0-6d7f-42e3-a9a6-d22be21cfc76
+# ╟─827f4b3c-ce0a-4c47-ad82-ca0db16855f3
 # ╟─1d5a31d2-3374-4a47-9c17-d065ccf34ca8
-# ╟─ced0a305-0ce5-4490-8b63-7074a530ba1d
+# ╟─3ab3491d-69d7-4c11-8d11-25b18ca93ee5
+# ╟─1fa2729a-f3b3-4bb8-b822-4540210a2626
+# ╟─a594288b-101d-4d9f-8cae-d04912a3a505
+# ╟─65ceab91-c840-454e-84d0-1e26c37cc60e
+# ╟─c80071e5-79bd-4f92-b121-e825fc5a998b
+# ╟─1b2dac24-a68a-48ac-9d56-7aa970e3a0c5
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
