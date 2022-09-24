@@ -34,14 +34,16 @@ md"""
 
 # ╔═╡ 6e971be6-c1ce-46fe-9b0a-4399316ef1a3
 md""" **a)** 
-319 when rounded off is **300**, while 589 rounded off is **600**. When you add together:
+319 when rounded off to the nearest hundred is **300**, while 589 rounded off is **600**.  
+
+When you add together:
 
 300 + 600 = $(@bind a1 NumberField(0:100)) as the total estimated value.
 """
 
 # ╔═╡ c50bd342-2177-4397-94c9-21685776ca91
 md""" **b)** 
-782 when rounded off is **800**, while 509 rounded off is **500**. 
+782 when rounded off to the nearest hundrednis **800**, while 509 rounded off is **500**. 
 
 800 - 500 = $(@bind b1 NumberField(0:100)) 
 """
@@ -57,7 +59,7 @@ md""" **c)**
 """
 
 # ╔═╡ b19155f0-a169-457c-a43e-7120fe690da5
-ans_c = (c1,c2,c3)
+ans_c = (c1,c2,c3);
 
 # ╔═╡ 959a6fb8-ea4b-4034-b36c-d5eaaf56a5ee
 md""" **d)** 
@@ -70,7 +72,7 @@ md""" **d)**
 """
 
 # ╔═╡ 79b76a5d-3efc-4480-bd9d-8e5cc401fa91
-ans_d = (d1,d2,d3)
+ans_d = (d1,d2,d3);
 
 # ╔═╡ 1dbaf508-6df6-4ff1-b96c-5e7f1f5eff71
 md""" **e)** 
@@ -83,7 +85,7 @@ md""" **e)**
 """
 
 # ╔═╡ 3d07029a-a34d-4055-9bce-fa1b09a0bd23
-ans_e = (e1,e2,e3)
+ans_e = (e1,e2,e3);
 
 # ╔═╡ dd032d4d-6298-4fcb-9337-17e4fac517fb
 md""" **f)** 
@@ -96,12 +98,13 @@ md""" **f)**
 """
 
 # ╔═╡ ef2bc5d3-fe75-44e7-b92c-e72260a3dfd2
-ans_f = (f1,f2,f3)
+ans_f = (f1,f2,f3);
 
 # ╔═╡ 7198ad22-a2c4-483e-8ce3-e97f94f5ac19
 md""" **g)** 
 
-|1798|+|416|||
+
+|1798|+|416 |     |     |
 |:---:|:---:|:---:|:---:|:---:
 |↓||↓||
 |$(@bind g1 NumberField(0:100))|+|$(@bind g2 NumberField(0:100))|=|$(@bind g3 NumberField(0:100))
@@ -109,7 +112,21 @@ md""" **g)**
 """
 
 # ╔═╡ 7a38f3bd-6bfe-44af-98d1-8bec1c832c1d
-ans_g = (g1,g2,g3)
+ans_g = (g1,g2,g3);
+
+# ╔═╡ 6f422b1f-0234-4804-91ea-ab51aecc307e
+md""" **h)** 
+
+
+|2304|-|996 |     |     |
+|:---:|:---:|:---:|:---:|:---:
+|↓||↓||
+|$(@bind h1 NumberField(0:100))|-|$(@bind h2 NumberField(0:100))|=|$(@bind h3 NumberField(0:100))
+
+"""
+
+# ╔═╡ 0dab4347-9288-413e-93a6-4416ecef172e
+ans_h = (h1,h2,h3);
 
 # ╔═╡ 1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 md""" # Summary
@@ -224,20 +241,6 @@ end;
 # ╔═╡ e8b882a0-6d7f-42e3-a9a6-d22be21cfc76
 eval_f(ans_f)[1]
 
-# ╔═╡ 1fa2729a-f3b3-4bb8-b822-4540210a2626
-begin
-	results = [eval_a(a1)[2],eval_b(b1)[2],eval_c(c1)[2],eval_d(d1)[2],eval_e(e1)[2],eval_f(f1)[2]]
-
-	top_score = length(results)
-	
-	counter=0
-	for result in results
-		if result == 1
-			counter += 1
-		end
-	end
-end;
-
 # ╔═╡ 636e5e28-19c2-40cc-b8b6-89c8f5b10537
 begin
 	function eval_g(ans)
@@ -255,6 +258,38 @@ end;
 
 # ╔═╡ 975c117d-d803-46a2-b1c4-f8c60d2f0623
 eval_g(ans_g)[1]
+
+# ╔═╡ cca5fa45-7dae-47a2-92a6-411991705a8c
+begin
+	function eval_h(ans)
+		if (2300,1000,1300) == ans
+			return correct(),1
+		elseif (0,0,0) == ans
+			return md"""""",0
+		elseif (2300,1000,0) == ans
+			return hint(md"Yes that is right!. Keep goin'"),0
+		else
+			return keep_working(),0
+		end
+	end
+end;
+
+# ╔═╡ dc5a116e-f5f7-43b9-a74a-92041cf1acc0
+eval_h(ans_h)[1]
+
+# ╔═╡ 1fa2729a-f3b3-4bb8-b822-4540210a2626
+begin
+	results = [eval_a(a1)[2],eval_b(b1)[2],eval_c(ans_c)[2],eval_d(ans_d)[2],eval_e(ans_e)[2],eval_f(ans_f)[2],eval_g(ans_g)[2],eval_h(ans_h)[2]]
+
+	top_score = length(results)
+	
+	counter=0
+	for result in results
+		if result == 1
+			counter += 1
+		end
+	end
+end;
 
 # ╔═╡ 1b2dac24-a68a-48ac-9d56-7aa970e3a0c5
 note(text) = Markdown.MD(Markdown.Admonition("note", "Remember:", [text]));
@@ -521,39 +556,43 @@ version = "17.4.0+0"
 # ╟─095c5690-2829-11ed-0d49-af3b33334ea7
 # ╟─c1ba96d8-4f88-4338-ab8c-e7b399f63115
 # ╟─95567e32-d284-4ecd-bdc8-6761cff0c075
-# ╠═6e971be6-c1ce-46fe-9b0a-4399316ef1a3
-# ╠═eb8fdbab-c959-4fb9-86a7-0368874f8952
-# ╠═c79b606e-8b0f-4d29-adad-1bfed489066e
-# ╠═c50bd342-2177-4397-94c9-21685776ca91
-# ╠═50e010ff-a3e4-42cc-a594-39ac3c8f34eb
-# ╠═fb6a57c7-0fea-4c0c-b7bb-8335b819562b
-# ╠═597b6b36-df29-436d-aae8-c483784726eb
-# ╠═de9b828c-d0c9-4d1c-87c6-49e2338fe75d
-# ╠═b19155f0-a169-457c-a43e-7120fe690da5
-# ╠═6687b5ac-44e5-4019-a091-3bc42cdf861d
-# ╠═959a6fb8-ea4b-4034-b36c-d5eaaf56a5ee
-# ╠═c0f75efc-ef47-4e8c-9ba0-3253ae823ec9
-# ╠═79b76a5d-3efc-4480-bd9d-8e5cc401fa91
-# ╠═7dfa5f8a-1062-4db1-86c5-9528cd4149b8
-# ╠═1dbaf508-6df6-4ff1-b96c-5e7f1f5eff71
-# ╠═e80087dd-2d9d-43df-a9a6-5b9df23e4c19
-# ╠═3d07029a-a34d-4055-9bce-fa1b09a0bd23
-# ╠═c2456e5a-fa16-44a1-b11b-f81ff1f2413a
-# ╠═dd032d4d-6298-4fcb-9337-17e4fac517fb
-# ╠═e8b882a0-6d7f-42e3-a9a6-d22be21cfc76
-# ╠═ef2bc5d3-fe75-44e7-b92c-e72260a3dfd2
-# ╠═827f4b3c-ce0a-4c47-ad82-ca0db16855f3
-# ╠═7198ad22-a2c4-483e-8ce3-e97f94f5ac19
-# ╠═975c117d-d803-46a2-b1c4-f8c60d2f0623
-# ╠═7a38f3bd-6bfe-44af-98d1-8bec1c832c1d
-# ╠═636e5e28-19c2-40cc-b8b6-89c8f5b10537
+# ╟─6e971be6-c1ce-46fe-9b0a-4399316ef1a3
+# ╟─eb8fdbab-c959-4fb9-86a7-0368874f8952
+# ╟─c79b606e-8b0f-4d29-adad-1bfed489066e
+# ╟─c50bd342-2177-4397-94c9-21685776ca91
+# ╟─50e010ff-a3e4-42cc-a594-39ac3c8f34eb
+# ╟─fb6a57c7-0fea-4c0c-b7bb-8335b819562b
+# ╟─597b6b36-df29-436d-aae8-c483784726eb
+# ╟─de9b828c-d0c9-4d1c-87c6-49e2338fe75d
+# ╟─b19155f0-a169-457c-a43e-7120fe690da5
+# ╟─6687b5ac-44e5-4019-a091-3bc42cdf861d
+# ╟─959a6fb8-ea4b-4034-b36c-d5eaaf56a5ee
+# ╟─c0f75efc-ef47-4e8c-9ba0-3253ae823ec9
+# ╟─79b76a5d-3efc-4480-bd9d-8e5cc401fa91
+# ╟─7dfa5f8a-1062-4db1-86c5-9528cd4149b8
+# ╟─1dbaf508-6df6-4ff1-b96c-5e7f1f5eff71
+# ╟─e80087dd-2d9d-43df-a9a6-5b9df23e4c19
+# ╟─3d07029a-a34d-4055-9bce-fa1b09a0bd23
+# ╟─c2456e5a-fa16-44a1-b11b-f81ff1f2413a
+# ╟─dd032d4d-6298-4fcb-9337-17e4fac517fb
+# ╟─e8b882a0-6d7f-42e3-a9a6-d22be21cfc76
+# ╟─ef2bc5d3-fe75-44e7-b92c-e72260a3dfd2
+# ╟─827f4b3c-ce0a-4c47-ad82-ca0db16855f3
+# ╟─7198ad22-a2c4-483e-8ce3-e97f94f5ac19
+# ╟─975c117d-d803-46a2-b1c4-f8c60d2f0623
+# ╟─7a38f3bd-6bfe-44af-98d1-8bec1c832c1d
+# ╟─636e5e28-19c2-40cc-b8b6-89c8f5b10537
+# ╟─6f422b1f-0234-4804-91ea-ab51aecc307e
+# ╟─dc5a116e-f5f7-43b9-a74a-92041cf1acc0
+# ╟─0dab4347-9288-413e-93a6-4416ecef172e
+# ╟─cca5fa45-7dae-47a2-92a6-411991705a8c
 # ╟─1d5a31d2-3374-4a47-9c17-d065ccf34ca8
-# ╠═3ab3491d-69d7-4c11-8d11-25b18ca93ee5
-# ╠═1fa2729a-f3b3-4bb8-b822-4540210a2626
-# ╠═a594288b-101d-4d9f-8cae-d04912a3a505
-# ╠═65ceab91-c840-454e-84d0-1e26c37cc60e
-# ╠═c80071e5-79bd-4f92-b121-e825fc5a998b
-# ╠═1b2dac24-a68a-48ac-9d56-7aa970e3a0c5
-# ╠═351ab84a-b933-4856-a829-7f41d9f9202c
+# ╟─3ab3491d-69d7-4c11-8d11-25b18ca93ee5
+# ╟─1fa2729a-f3b3-4bb8-b822-4540210a2626
+# ╟─a594288b-101d-4d9f-8cae-d04912a3a505
+# ╟─65ceab91-c840-454e-84d0-1e26c37cc60e
+# ╟─c80071e5-79bd-4f92-b121-e825fc5a998b
+# ╟─1b2dac24-a68a-48ac-9d56-7aa970e3a0c5
+# ╟─351ab84a-b933-4856-a829-7f41d9f9202c
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
