@@ -226,7 +226,7 @@ eval_e(ans_e)[1]
 # ╔═╡ 827f4b3c-ce0a-4c47-ad82-ca0db16855f3
 begin
 	function eval_f(ans)
-		if (900,300,1200) == ans
+		if (900,300,600) == ans
 			return correct(),1
 		elseif (0,0,0) == ans
 			return md"""""",0
