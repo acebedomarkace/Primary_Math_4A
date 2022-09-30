@@ -46,7 +46,39 @@ are factors of 12.
 """
 
 # ╔═╡ 65390735-493b-48d5-bf47-876fbab0253f
-ans_1=[a1,a2];
+ans_a=[a1,a2];
+
+# ╔═╡ 872e609b-141b-4b12-8508-07ec4ca18811
+md""" **(b)**  
+
+**1 x 8 = 8**
+
+$(@bind b1 html"<input type=text size=3>") and 
+
+$(@bind b2 html"<input type=text size=3>") 
+
+are factors of 8.
+
+"""
+
+# ╔═╡ 077f45cd-a221-4e59-be97-071e576a65aa
+ans_b=[b1,b2];
+
+# ╔═╡ 226b4286-e930-4420-a725-c7df5af4f979
+md""" **(c)**  
+
+**3 x 7 = 21**
+
+$(@bind c1 html"<input type=text size=3>") and 
+
+$(@bind c2 html"<input type=text size=3>") 
+
+are factors of 21.
+
+"""
+
+# ╔═╡ 0ead3df4-dc42-4ac6-bd68-3f4257fee0e7
+ans_c=[c1,c2];
 
 # ╔═╡ 1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 md""" # Summary
@@ -56,7 +88,7 @@ md""" # Summary
 correct(text=md"👍 Great! You got the right answer! Let's move on to the next section.") = Markdown.MD(Markdown.Admonition("correct", "Got it!", [text]));
 
 # ╔═╡ 65ceab91-c840-454e-84d0-1e26c37cc60e
-keep_working(text=md"🤔 The answer is not quite right.") = Markdown.MD(Markdown.Admonition("danger", "Keep working on it!", [text]));
+keep_working(text=md"🤔 The answer is not quite right or maybe incomplete.") = Markdown.MD(Markdown.Admonition("danger", "Keep working on it!", [text]));
 
 # ╔═╡ c80071e5-79bd-4f92-b121-e825fc5a998b
 hint(text) = Markdown.MD(Markdown.Admonition("hint", "Note:", [text]));
@@ -64,9 +96,9 @@ hint(text) = Markdown.MD(Markdown.Admonition("hint", "Note:", [text]));
 # ╔═╡ c79b606e-8b0f-4d29-adad-1bfed489066e
 begin
 	function eval_a(ans)
-		if [1,2,4,5,10,20] == sort(ans)
+		if ["2","6"] == ans || ["6","2"] == ans
 			return correct(),1
-		elseif [0,0,0,0,0,0] == ans
+		elseif ["",""] == ans
 			return hint(md"If you are having trouble, you might want to look into the topic of factors."),0
 		else
 			return keep_working(),0
@@ -75,17 +107,43 @@ begin
 end;
 
 # ╔═╡ eb8fdbab-c959-4fb9-86a7-0368874f8952
+eval_a(ans_a)[1]
+
+# ╔═╡ 00f969da-3b67-40d0-a844-708f9929aa87
 begin
-	try
-		eval_a(ans_1)[1]
-	catch
-		println("You might have left a box or two empty")
-	end 
-end
+	function eval_b(ans)
+		if ["1","8"] == ans || ["8","1"] == ans
+			return correct(),1
+		elseif ["",""] == ans
+			return hint(md"If you are having trouble, you might want to look into the topic of factors."),0
+		else
+			return keep_working(),0
+		end
+	end
+end;
+
+# ╔═╡ bb00d9a9-f7a9-4860-8c21-c6f7ec7505d5
+eval_b(ans_b)[1]
+
+# ╔═╡ 48a42270-b8ec-4306-b2d7-d36f43f361e3
+begin
+	function eval_c(ans)
+		if ["3","7"] == ans || ["7","3"] == ans
+			return correct(),1
+		elseif ["",""] == ans
+			return hint(md"If you are having trouble, you might want to look into the topic of factors."),0
+		else
+			return keep_working(),0
+		end
+	end
+end;
+
+# ╔═╡ 17a4b142-5cb9-42f9-8a63-8fb797dbe0c1
+eval_c(ans_c)[1]
 
 # ╔═╡ 1fa2729a-f3b3-4bb8-b822-4540210a2626
 begin
-		results = [eval_a(ans_1)[2]]
+		results = [eval_a(ans_a)[2],eval_b(ans_b)[2],eval_c(ans_c)[2]]
 	
 		top_score = length(results)
 		
@@ -369,6 +427,14 @@ version = "17.4.0+0"
 # ╟─eb8fdbab-c959-4fb9-86a7-0368874f8952
 # ╟─65390735-493b-48d5-bf47-876fbab0253f
 # ╟─c79b606e-8b0f-4d29-adad-1bfed489066e
+# ╟─872e609b-141b-4b12-8508-07ec4ca18811
+# ╟─bb00d9a9-f7a9-4860-8c21-c6f7ec7505d5
+# ╟─077f45cd-a221-4e59-be97-071e576a65aa
+# ╟─00f969da-3b67-40d0-a844-708f9929aa87
+# ╟─226b4286-e930-4420-a725-c7df5af4f979
+# ╟─17a4b142-5cb9-42f9-8a63-8fb797dbe0c1
+# ╟─0ead3df4-dc42-4ac6-bd68-3f4257fee0e7
+# ╟─48a42270-b8ec-4306-b2d7-d36f43f361e3
 # ╟─1d5a31d2-3374-4a47-9c17-d065ccf34ca8
 # ╟─3ab3491d-69d7-4c11-8d11-25b18ca93ee5
 # ╟─1fa2729a-f3b3-4bb8-b822-4540210a2626
